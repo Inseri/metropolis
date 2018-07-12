@@ -8,7 +8,6 @@
 		<meta charset:"UTF-8">
     		<title>METROPOLIS VOD</title>
 			<link rel="stylesheet" href="css/main.css">
-			<link rel="stylesheet" href="css/kanrisha.css">
 			<link rel="stylesheet" href="css/footer.css">
     		<link rel="stylesheet" href="css/header.css">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -32,7 +31,7 @@
 		?>
 
         <?php include "hf/header.php"?>
-        
+        <main class="insc">
         <?php
 
 $titre = $_POST['titre'];
@@ -80,17 +79,13 @@ $pattern3 = '#^(((((1[26]|2[048])00)|[12]\d([2468][048]|[13579][26]|0[48]))-((((
                     }
 
                     if ($err == 0){
-                        echo '<a href="index.php">Cliquez ici pour retourner à la page principale ou cliquez sur l\'icone "<i class="fas fa-user-alt"></i>" en haut de page pour vous connecter immédiatement.</a><br>';
+                        echo '<br><br><p class="fel">Félicitation ! Vous êtes à présent inscrit pour le service de VOD ! </p><br><br><p class="fel"><a class="link" href="index.php">Cliquez ici pour retourner à la page principale ou cliquez sur l\'icone "<i class="fas fa-user-alt"></i>" en haut de page pour vous connecter immédiatement.</p></a><br><br>';
                     } else {
                         echo '<a href="register.php">Cliquez ici pour complèter à nouveau le formulaire d\'inscription</a><br>';
                     }
-
 	?>
-
-
-
-
-
+                    <img class="pictmetro" src="img/metropolis.jpg">
+    </main>
 
         <?php include "hf/footer.html"?>					
 	</body>
