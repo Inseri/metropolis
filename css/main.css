@@ -200,14 +200,6 @@ legend {
     width: 400px;
 }
 
-.conn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 400px;
-    background-color: #000000;
-}
-
 .txtinputco {
     background-color: #0A0A0A;
     border: none;
@@ -218,29 +210,13 @@ legend {
     margin-bottom: 5px;
 }
 
-#validerco,
-#annulerco {
-    width: 120px;
-    height: 30px;
-    margin: 5px;
-    transition-property: text-shadow;
-    transition-property: box-shadow;
-    transition-duration: 1.5s;
-    background-color: #0A0A0A;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-#validerco:hover,
-#annulerco:hover {
-    background-color: #000000;
-    text-shadow: #00FFFF 0 0 15px;
-    box-shadow: #00FFFF 0 0 15px;
-}
-
 .fel {
     font-size: 1.5rem;
     text-align: center;
+}
+
+.err {
+    font-size: 1.2rem;
 }
 
 .link {
@@ -255,6 +231,8 @@ legend {
 }
 
 .pictmetro {
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: calc(50% - 275px);
     width: 550px;
     height: auto;

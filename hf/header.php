@@ -81,11 +81,12 @@
     </form>
 </div>
 <div id="conn" style="display:none">
-    <form class="conn" method="post" action="#">
+    <form class="conn" method="post" action="user.php">
         <fieldset>
             <legend>Connexion</legend>
             <label for="mailco"> Email : </label><br><input type="email" name="mailco" id="mailco" class="txtinputco" placeholder="Votre email" required/><br>
             <label for="pwdco"> Mot de passe : </label><input type="password" name="pwdco" id="pwdco" class="txtinputco" placeholder="Mot de Passe" required/><br>
+            <a class="recovery" href="recovery.php"> Mot de passe oublié ?</a>
             <input id="validerco" type="submit" value="CONNEXION">
             <input id="annulerco" type="reset" value="RESET">
         </fieldset>

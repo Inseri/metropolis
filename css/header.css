@@ -64,3 +64,41 @@ nav {
 a {
     text-decoration: none;
 }
+
+.recovery {
+    font-size: 0.7rem;
+    transition-property: text-shadow;
+    transition-duration: 1.5s;
+}
+
+.recovery:hover {
+    text-shadow: #00FFFF 0 0 15px;
+}
+
+.conn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    background-color: #000000;
+}
+
+#validerco,
+#annulerco {
+    width: 120px;
+    height: 30px;
+    margin: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #0A0A0A;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#validerco:hover,
+#annulerco:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}

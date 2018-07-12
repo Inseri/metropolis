@@ -26,7 +26,7 @@
                         <label for="lname"> Prénom : </label><br><input type="text" name="lname" id="lname" class="txtinput" placeholder="Votre prénom" required/><br>
                         <label for="bdate"> Date de naissance (sous la forme AAAA-MM-JJ): </label><br><input class="txtinput" type="date" name="bdate" required/><br>
 			            <label for="mail"> Email : </label><br><input type="email" name="mail" id="mail" class="txtinput" placeholder="Votre email" required/><br>
-			            <label for="pwd"> Mot de passe : </label><input type="password" name="pwd" id="pwd" class="txtinput" placeholder="Mot de Passe" required/><br>
+			            <label for="pwd"> Mot de passe (8 caractères minimum et 15 au maximum): </label><input type="password" name="pwd" id="pwd" class="txtinput" placeholder="Mot de Passe" required/><br>
 			            <label for="pwdc"> Confirmation du mot de passe : </label><input type="password" name="pwdc" id="pwdc" class="txtinput" placeholder="Mot de Passe" required/><br>
                         <input id="valider" type="submit" value="S'INSCRIRE">
                         <input id="annuler" type="reset" value="RESET">
