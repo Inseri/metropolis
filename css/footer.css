@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+}
+
+.res {
+    font-size: 60px;
+}
+
+.respict {
+    transition-property: text-shadow;
+    transition-duration: 1.5s;
+}
+
+.respict:hover {
+    text-shadow: #00FFFF 0 0 15px;
+}
+
+.ml {
+    padding-top: 100px;
+}
+
+.l {
+    width: 200px;
+}
+
+.logof {
+    width: calc(100% - 350px);
+    text-align: center;
+    padding-top: 22px;
+}
+
+.copy {
+    width: 150px;
+    padding-top: 170px;
+}

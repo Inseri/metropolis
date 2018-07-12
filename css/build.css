@@ -1,0 +1,8 @@
+html {
+    background-color: #000000;
+}
+
+.build {
+    margin-top: 10px;
+    margin-left: calc(50% - 400px);
+}
