@@ -1,0 +1,101 @@
+.mainint {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.menuuser {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.intuser {
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #333333
+}
+
+.menubtn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    cursor: pointer;
+}
+
+.menubtn:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}
+
+.head {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem !important;
+}
+
+.urgent {
+    color: #FF0000;
+}
+
+.MVN {
+    background-color: #0A0A0A;
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 100px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+.MVN:focus {
+    background-color: #161616;
+}
+
+#confirmer {
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #0A0A0A;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#valider:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}
+
+#suppr {
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #0A0A0A;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#suppr:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}

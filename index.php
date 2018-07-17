@@ -6,6 +6,22 @@
             header("Location: index.php");
         }
 ?>
+	<?php
+			$host_name = 'db745044935.db.1and1.com';
+			$database = 'db745044935';
+			$user_name = 'dbo745044935';
+			$password = 'Arika-123';
+
+			$dbh = null;
+			
+			try {
+				$dbh = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
+			} catch (PDOException $e) {
+  			echo "Erreur!: " . $e->getMessage() . "<br/>";
+  			die();
+			}
+			$dbh->exec("SET CHARACTER SET utf8");
+		?>
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
@@ -35,10 +51,29 @@
             <div class="prez"><h1>Le mot du Directeur</h1><p>Vous ne pouvez pas vous rendre au cinéma ? <br>Alors emmenez-le avec vous, partout où vous voulez et sur tout vos écrans à un prix compétitif ! <br> Profitez des derniers films 3 mois après leur sortie cinéma !<br> Que vous soyez en déplacement sur votre smarphone seul ou chez vous en famille ou en amis, vous pouvez à présent profiter d'une expérience cinématographique exceptionnelle grâce au support de la 4K et du son Dolby Surround en 7.1.<br>
             </div>
             <div class="nouv"><h1>Les nouveautés</h1>
-                <div><span>#Insérer code php ici#<span></div>
+                <div class="movieframe">
+                
+                    <?php
+
+                        $req = $dbh->prepare('SELECT * FROM film ORDER BY IDfilm DESC LIMIT 5');
+                        $req->execute();
+                        while ($donnees = $req->fetch()){
+                        $var =  $donnees['IDfilm'];
+                        $var2 = $donnees['titrefr'];
+                        $var3 = $donnees['affiche'];
+
+                        echo '<a class="moviebox" href="details.php?IDfilm='.$var.'"><div >';
+                        echo '<p class="titre">'.$var2.'</p>';
+                        echo "<br>";
+                        echo '<img class="pictfilm" src="aff/'.$var3.'">';
+                        echo "</div></a>";
+}
+                ?>
+
+                </div>
             </div>
             <div class="favs"><h1>Les favoris des utilisateurs</h1>
-                <div><span>#Insérer code php ici#<span></div>
+            <div class="movieframe">#INSEREZ CODE PHP ICI#</div>
             </div>
         </main>
         <?php
@@ -55,4 +90,4 @@
 	    <?php include "hf/footer.html"?>					
     </body>
      <?php include "hf/scripts.html"?>
-</html> 
+</html>

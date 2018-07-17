@@ -27,7 +27,8 @@
 			} catch (PDOException $e) {
   			echo "Erreur!: " . $e->getMessage() . "<br/>";
   			die();
-			}
+            }
+            $dbh->exec("SET CHARACTER SET utf8");
 		?>
 
         <?php include "hf/header.php"?>

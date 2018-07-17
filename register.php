@@ -20,7 +20,7 @@
                     <p>Tous les champs sont obligatoires</p>
                     <br>
                         <label>Titre : </label>
-                        <input type="radio" name="titre" value="Mme" id="F" required/><label for="F">Mme</label>
+                        <input type="radio" name="titre" value="F" id="F" required/><label for="F">Mme</label>
                         <input type="radio" name="titre" value="M" id="M" required/><label for="M">M</label><br>
                         <label for="fname"> Nom : </label><br><input type="text" name="fname" id="fname" class="txtinput" placeholder="Votre nom" required/><br>
                         <label for="lname"> Prénom : </label><br><input type="text" name="lname" id="lname" class="txtinput" placeholder="Votre prénom" required/><br>

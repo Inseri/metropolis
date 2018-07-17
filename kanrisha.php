@@ -29,6 +29,7 @@
   			echo "Erreur!: " . $e->getMessage() . "<br/>";
   			die();
 			}
+			$dbh->exec("SET CHARACTER SET utf8");
 		?>
 	<?php
 		$id = $_POST['id'];
@@ -69,8 +70,8 @@
 				if (isset($_SESSION['login'])) {
 	 				echo '<div class="mainint">
  						<div class="menukan">';
- 					echo 'Bienvenu '.$_SESSION['login'].' .';
- 					echo '
+ 					echo '<p class="head">Bienvenu '.$_SESSION['login'].' .</p>';
+ 					echo '<br>
 						<div class="menubtn" id="cfilmbtn">Créer Fiche Film</div>
 						<div class="menubtn" id="mfilmbtn">Modifier Fiche Film</div>
 						<div class="menubtn" id="muserbtn">Gérer Utilisateurs</div>

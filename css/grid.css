@@ -1,0 +1,79 @@
+.gridframe {
+    display: grid;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #0F0F0F;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gridelem {
+    height: 50px;
+}
+
+.titre {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.affiche {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 11;
+}
+
+.info {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.onglet {
+    text-align: right;
+}
+
+.synmenu {
+    grid-row-start: 7;
+    grid-row-end: 11;
+    height: 300px;
+}
+
+.syncontent {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 11;
+    height: 300px;
+}
+
+.video {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 11;
+    grid-row-end: 16;
+    height: 400px;
+}
+
+.pictbox {
+    width: 350px;
+    height: auto;
+}
+
+.fav {
+    width: 200px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    padding: auto;
+}
+
+.fav:hover {
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}
+
+.pad {
+    padding-left: 10px;
+    padding-right: 10px;
+}

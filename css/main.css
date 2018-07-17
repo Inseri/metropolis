@@ -237,3 +237,47 @@ legend {
     width: 550px;
     height: auto;
 }
+
+.pictmetro2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 0;
+    width: 550px;
+    height: auto;
+}
+
+.movieframe {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.moviebox {
+    display: inline-block;
+    margin: auto;
+    margin-top: 0;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+}
+
+.moviebox:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}
+
+.pictfilm {
+    width: 300px;
+    height: auto;
+}
+
+.titre {
+    font-size: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}

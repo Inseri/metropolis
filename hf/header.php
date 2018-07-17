@@ -2,14 +2,13 @@
     <div class="flag">
         <a href="indexen.php"><img src="img/en.jpg" alt="en"></a>
     </div>
-    </div>
     <div class="logo">
         <a href="index.php"><img src="img/logo.png" alt="Metropolis VOD"></a>
     </div>
 </header>
 <nav>
     <div class="menu vidlist">
-        <a href="build/buildfr.php">
+        <a href="films.php">
             <p>Vidéothèque</p>
         </a>
     </div>
@@ -43,7 +42,7 @@
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
                 <div class="menu home">
-                <a href="build/buildfr.php"><i class="fas fa-home"></i></a>
+                <a href="user.php"><i class="fas fa-home"></i></a>
                 </div>';
         }
     ?>
