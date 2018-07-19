@@ -1,6 +1,6 @@
 <header>
     <div class="flag">
-        <a href="indexen.php"><img src="img/en.jpg" alt="en"></a>
+        <a href="en/index.php"><img src="img/en.jpg" alt="en"></a>
     </div>
     <div class="logo">
         <a href="index.php"><img src="img/logo.png" alt="Metropolis VOD"></a>
@@ -13,7 +13,7 @@
         </a>
     </div>
     <div class="menu whorus">
-        <a href="build/buildfr.php">
+        <a href="presentation.php">
             <p>Présentation</p>
         </a>
     </div>

@@ -1,0 +1,44 @@
+.page {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#next,
+#next2 {
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #0A0A0A;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#next:hover,
+#next2:hover {
+    background-color: #000000;
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
+}
+
+.txt {
+    background-color: #0A0A0A;
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.txt:focus {
+    background-color: #161616;
+}
