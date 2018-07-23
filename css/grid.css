@@ -73,6 +73,7 @@
     transition-property: box-shadow;
     transition-duration: 1.5s;
     padding: auto;
+    cursor: pointer;
 }
 
 .fav:hover {

@@ -1,22 +1,8 @@
 <?php include "hf/sessionmatr.php"?>
-<?php
-			$host_name = 'db745044935.db.1and1.com';
-			$database = 'db745044935';
-			$user_name = 'dbo745044935';
-			$password = 'Arika-123';
+<?php include "hf/co.php"?>
 
-			$dbh = null;
-			
-			try {
-				$dbh = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
-			} catch (PDOException $e) {
-  			echo "Erreur!: " . $e->getMessage() . "<br/>";
-  			die();
-			}
-			$dbh->exec("SET CHARACTER SET utf8");
-			$id = $_GET['IDfilm'];
-        ?>
 
+<?php $id = $_GET['IDfilm'];?>
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
@@ -30,17 +16,19 @@
     </head>
 <body>
     <?php include "hf/header.php"?>
-	
+	<main>
 	<?php
-	        $reqi = $dbh->prepare('SELECT IDfilm FROM film ORDER BY IDfilm DESC LIMIT 1');
-			$reqi->execute();
+
+			$reqi = $dbh->prepare('SELECT IDfilm FROM film WHERE IDfilm = ?');
+			$reqi->execute(array($id));
 		while ($donnees = $reqi->fetch()){
 			$vari =  $donnees['IDfilm'];
+
 		}
 
-		if ($_GET['IDfilm'] > $vari){
-			echo "<p>ERREUR : ID non valide</p>";
-			echo '<img class="pictmetro" src="img/metropolis.jpg">';
+		if ($id != $vari){
+				echo "<p>ERREUR : ID non valide</p>";
+				echo '<img class="pictmetro" src="img/metropolis.jpg">';
 		} else {
 	        $req = $dbh->prepare('SELECT * FROM film WHERE IDfilm = ?');
 			$req->execute(array($id));
@@ -68,7 +56,7 @@
 
 			if ($_GET['IDfilm'] <= $vari){
 
-        echo'<main>
+        echo'
 
 			<div class="gridframe">
 				<div class="gridelem titre"><p>'.$var.'</p></div>
@@ -116,7 +104,7 @@
   				<div class="gridelem"></div>
 				<div class="gridelem"></div>
 				<div class="gridelem"></div>
-  				<div class="gridelem fav"><p>Mettre en Favoris<p></div>
+  				<div class="gridelem fav" id="favbtn"><p>Mettre en Favoris<p></div>
 			</div>
     
 		</main>';

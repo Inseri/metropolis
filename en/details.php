@@ -117,7 +117,7 @@
   				<div class="gridelem"></div>
 				<div class="gridelem"></div>
 				<div class="gridelem"></div>
-  				<div class="gridelem fav"><p>Fav this film<p></div>
+  				<div class="gridelem fav" id="favbtn"><p>Fav this film<p></div>
 			</div>
     
 		</main>';

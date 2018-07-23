@@ -1,6 +1,7 @@
 <?php
 	session_start ();
 ?>
+    <?php include "hf/co.php"?>
 
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -15,22 +16,6 @@
 	</head>
 
 	<body>
-	<?php
-			$host_name = 'db745044935.db.1and1.com';
-			$database = 'db745044935';
-			$user_name = 'dbo745044935';
-			$password = 'Arika-123';
-
-			$dbh = null;
-			
-			try {
-				$dbh = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
-			} catch (PDOException $e) {
-  			echo "Erreur!: " . $e->getMessage() . "<br/>";
-  			die();
-			}
-			$dbh->exec("SET CHARACTER SET utf8");
-		?>
 	<?php
 		$id = $_POST['mailco'];
 			$pass= $_POST['pwdco'];
@@ -127,7 +112,7 @@
 									if ($var5 == 0) {
 										echo '<p><span class="urgent">ATTENTION</span> : Votre email n\'a pas été verifiée</p>';
 									}
-								echo'<img class="pictmetro2" src="img/metropolis.jpg">';
+								echo'<img class="pictmetro" src="img/metropolis.jpg">';
 							echo '</div>
 	 						<div class="gesd" id="gesd" style="display:none">A venir B</div>
 	 						<div class="gesf" id="gesf" style="display:none">A venir C</div>

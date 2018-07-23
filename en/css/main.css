@@ -174,7 +174,8 @@ legend {
     font-size: 1.2rem;
 }
 
-.detail:focus {
+.detail:focus,
+.rechbox:focus {
     background-color: #161616;
 }
 
@@ -311,4 +312,46 @@ strong {
 .cgu {
     width: 90%;
     margin-left: 5%;
+}
+
+.rechmenu {
+    height: 150px;
+    width: 100%;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #000000;
+}
+
+.rechmenu fieldset {
+    width: 1000px;
+}
+
+.pad2 {
+    padding-right: 150px;
+}
+
+.rechbox {
+    background-color: #0A0A0A;
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+
+.rechercher {
+    width: 150px;
+    height: 30px;
+    margin: 5px;
+    transition-property: text-shadow;
+    transition-property: box-shadow;
+    transition-duration: 1.5s;
+    background-color: #0A0A0A;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rechercher:hover {
+    text-shadow: #00FFFF 0 0 15px;
+    box-shadow: #00FFFF 0 0 15px;
 }

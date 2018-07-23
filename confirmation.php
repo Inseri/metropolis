@@ -1,6 +1,7 @@
 <?php
 	session_start ();
 ?>
+    <?php include "hf/co.php"?>
 
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -14,22 +15,7 @@
 	</head>
 
 	<body>
-	<?php
-			$host_name = 'db745044935.db.1and1.com';
-			$database = 'db745044935';
-			$user_name = 'dbo745044935';
-			$password = 'Arika-123';
 
-			$dbh = null;
-			
-			try {
-				$dbh = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
-			} catch (PDOException $e) {
-  			echo "Erreur!: " . $e->getMessage() . "<br/>";
-  			die();
-            }
-            $dbh->exec("SET CHARACTER SET utf8");
-		?>
 
         <?php include "hf/header.php"?>
         <main class="insc">
@@ -86,6 +72,17 @@ $pattern3 = '#^(((((1[26]|2[048])00)|[12]\d([2468][048]|[13579][26]|0[48]))-((((
 
                     if (!preg_match($pattern3,$bdate)){
                         echo '<p class="err">ERREUR : Votre date de naissance doit être au format AAAA-MM-JJ ou la date renseignée n\'est pas valide.</p><br>';
+                        $err++;
+                    }
+
+                    $req2 = $dbh->prepare('SELECT email FROM user WHERE email = ?');
+					$req2->execute(array($email));
+				while ($donnees = $req2->fetch()){
+					$var2 =  $donnees['email'];
+                    }
+                    
+                    if ($var2 == $email){
+                        echo '<p class="err">ERREUR : Vous avez déjà un compte d\'inscrit. Vous pouvez récupérer votre mot de passe en cliquant ><a href="recovery.php">ici</a><. Si vous n\'êtes pas à l\'origine de l\'inscription, veuillez contacter un administrateur via le formulaire contact disponible en haut de page</p><br>';
                         $err++;
                     }
 
